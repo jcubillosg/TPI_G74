@@ -1,47 +1,346 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Showcase</title>
-    
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/variables.css">
-    <link rel="stylesheet" href="assets/css/components/header.css">
-    <link rel="stylesheet" href="assets/css/components/products.css">
-    <link rel="stylesheet" href="assets/css/components/animations.css">
-    <link rel="stylesheet" href="assets/css/utilities/helpers.css">
-    <link rel="stylesheet" href="style.css"> <!-- Main stylesheet -->
-</head>
-<body>
-    <!-- Header content -->
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="assets/images/logo/logo.png" alt="MyStore">
-            </div>
-            <!-- Navigation links -->
-        </nav>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grupo 74 - TPI</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="assets/logo-unal.svg" as="image" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="logo">
+        <img src="assets/logo-unal.svg" alt="Logo de la organización" />
+        <span>Manejo de Aguas Lluvias en la Planta de Compostaje</span>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Abrir menú</span>
+        ☰
+      </button>
+      <nav id="primary-nav" class="site-nav">
+        <a href="#resumen">Resumen</a>
+        <a href="#contexto">Contexto</a>
+        <a href="#impacto">Impacto</a>
+        <a href="#cronograma">Cronograma</a>
+        <a href="#entregables">Entregables</a>
+        <a href="#propuesta">Propuesta</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#pitch">Pitch</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
     </header>
 
     <main>
-        <!-- Hero section with background image -->
-        <section id="hero" style="background-image: url('assets/images/hero/hero-bg.jpg')">
-            <!-- Hero content -->
-        </section>
+      <section class="hero" id="resumen">
+        <div class="hero__content">
+          <p class="eyebrow">Impacto en la Planta de Compostaje de la UN Sede Bogotá</p>
+          <h1>Nuestro Proyecto.</h1>
+          <p>
+            Este proyecto propone un sistema de recolección de aguas lluvias para la planta de compostaje de la Universidad Nacional de Colombia, sede Bogotá, con el fin de solucionar las inundaciones que retrasan el proceso de compostaje y generan mezclas no controladas de agua y lixiviados.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#impacto">Nuestra Ruta de Trabajo</a>
+            <a class="btn btn--ghost" href="#contacto">Quiero más info</a>
+          </div>
+        </div>
+      </section>
 
-        <!-- Products section -->
-        <section id="products">
-            <div class="products-grid" id="products-container">
-                <!-- Dynamic products -->
+      <section class="section section--context" id="contexto">
+        <div class="section__header">
+          <p class="eyebrow">Análisis</p>
+          <h2>Contexto</h2>
+          <p>
+            Información relevante sobre las problemáticas identificadas y casos similares que respaldan nuestra propuesta.
+          </p>
+        </div>
+
+        <div class="context__subsection">
+          <h3 class="context__subsection-title">Problemáticas</h3>
+          <p class="context__subsection-description">
+            Las principales dificultades que enfrenta la planta de compostaje y que motivan la necesidad de implementar nuestro sistema.
+          </p>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="assets/problematica-1.jpg" alt="" loading="lazy" />
             </div>
-        </section>
+            <div class="gallery-item">
+              <img src="assets/problematica-2.jpg" alt="" loading="lazy" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/problematica-3.jpg" alt="" loading="lazy" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/problematica-4.jpg" alt="" loading="lazy" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/problematica-5.jpg" alt="" loading="lazy" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/problematica-6.jpg" alt="" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <div class="context__subsection">
+          <h3 class="context__subsection-title">Casos Similares</h3>
+          <p class="context__subsection-description">
+            Referencias de proyectos exitosos que han implementado soluciones similares de manejo de aguas lluvias en plantas de compostaje.
+          </p>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="assets/caso-1.jpg" alt="Caso similar 1" loading="lazy" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/caso-2.jpg" alt="Caso similar 2" loading="lazy" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/caso-3.jpg" alt="Caso similar 3" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--info" id="impacto">
+        <div class="section__header">
+          <img src="assets/logo-unal.svg" alt="Logo institucional" />
+          <p class="eyebrow">Indicadores</p>
+          <h2>Nuestras Intenciones de Impacto</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Manejo Adecuado de Lixiviados</h3>
+            <p>Al mezclarse con el agua de lluvia por las inundaciones, los lixiviados contaminan el suelo, generan malos olores y pone en riesgo la salud pública, contradiciendo los principios de sostenibilidad y gestión ambiental integral.</p>
+          </article>
+          <article class="card">
+            <h3>Cumplimiento Normativo</h3>
+            <p>Nuestra propuesta cumple con las normas NTC 1500, NTC 1087 y NTC 6112, así como con el Decreto 1090 de 2018, que regula el aprovechamiento de aguas lluvias en edificaciones.</p>
+          </article>
+          <article class="card">
+            <h3>Mejora del Sistema de Gestión Integral</h3>
+            <p>La falta del manejo óptimo de agua lluvia retrasa los procesos de compostaje, añadiéndole hasta 2 meses, afectando negavitamente la eficiencia de la planta.</p>
+          </article>
+          <article class="card">
+            <h3>Idk</h3>
+            <p>Idk.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="cronograma">
+        <div class="section__header">
+          <p class="eyebrow">Ruta del proyecto</p>
+          <h2>Metodología del Proyecto</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline__item">
+            <div class="timeline__badge">Q1</div>
+            <div>
+              <h3>Planificación participativa</h3>
+              <p>Diagnóstico colaborativo con comunidades y aliados técnicos.</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__badge">Q2</div>
+            <div>
+              <h3>Pilotos verdes</h3>
+              <p>Instalación de jardines de lluvia y módulos demostrativos.</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__badge">Q3</div>
+            <div>
+              <h3>Escalamiento</h3>
+              <p>Replicación en 5 ciudades con monitoreo abierto al público.</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__badge">Q4</div>
+            <div>
+              <h3>Evaluación y legado</h3>
+              <p>Datos abiertos, guía metodológica y adopción por gobiernos locales.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__image">
+          <img src="assets/cronograma-visual.jpg" alt="" />
+          <p class="timeline__caption">
+            Línea de tiempo detallada con hitos semanales y entregables clave del proyecto.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="entregables">
+        <div class="section__header">
+          <p class="eyebrow">Resultados</p>
+          <h2>Nuestros Entregables</h2>
+        </div>
+      </section>
+
+      <section class="section section--proposal" id="propuesta">
+        <div class="section__header">
+          <p class="eyebrow">Documentación</p>
+          <h2>Propuesta Técnico-Económica</h2>
+        </div>
+        <div class="proposal__content">
+          <p class="proposal__context">
+            Este documento presenta el análisis técnico y económico completo del proyecto de mejora de la planta de compostaje. 
+            Incluye el diseño detallado del sistema de recolección de aguas lluvias, cálculos de inversión, estimaciones de 
+            retorno, cronograma de implementación y evaluación de impactos ambientales y económicos. La propuesta ha sido 
+            desarrollada siguiendo las normativas técnicas nacionales y está disponible para revisión y colaboración.
+          </p>
+          <a
+            class="btn btn--primary"
+            href="https://drive.google.com/file/d/1EjemploID/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            ¡Revisa Nuestra Propuesta!
+          </a>
+        </div>
+      </section>
+
+      <section class="section" id="equipo">
+        <div class="section__header">
+          <p class="eyebrow">Equipo</p>
+          <h2>Nuestro equipo</h2>
+          <p>
+            Somos un equipo de estudiantes comprometidos con la Sostenibilidad Ambiental, el cual cuenta roles claros e interdisciplinariedad.
+          </p>
+        </div>
+        <div class="team-grid">
+          <article class="team-member">
+            <div class="team-member__photo">
+              <img src="assets/profile-1.svg" alt="Foto de perfil de Vanessa Castañeda" />
+            </div>
+            <h3>Vanessa Castañeda</h3>
+            <p class="team-member__role">CEO</p>
+            <p class="team-member__bio">Estudiante de Ingeniería Civil</p>
+          </article>
+          <article class="team-member">
+            <div class="team-member__photo">
+              <img src="assets/profile-2.svg" alt="Foto de perfil de Andrea Morales" />
+            </div>
+            <h3>Andrea Morales</h3>
+            <p class="team-member__role">CFO</p>
+            <p class="team-member__bio">Estudiante de Ingeniería Química</p>
+          </article>
+          <article class="team-member">
+            <div class="team-member__photo">
+              <img src="assets/profile-3.svg" alt="Foto de perfil de Fabian Abreo" />
+            </div>
+            <h3>Fabian Abreo</h3>
+            <p class="team-member__role">CCO</p>
+            <p class="team-member__bio">Estudiante de Ingeniería Mecatrónica</p>
+          </article>
+          <article class="team-member">
+            <div class="team-member__photo">
+              <img src="assets/profile-4.svg" alt="Foto de perfil de Sergio Moreno" />
+            </div>
+            <h3>Sergio Moreno</h3>
+            <p class="team-member__role">COO</p>
+            <p class="team-member__bio">Estudiante de Ingeniería Eléctrica</p>
+          </article>
+          <article class="team-member">
+            <div class="team-member__photo">
+              <img src="assets/profile-5.svg" alt="Foto de perfil de Juan Cubillos" />
+            </div>
+            <h3>Juan Cubillos</h3>
+            <p class="team-member__role">CTO</p>
+            <p class="team-member__bio">Estudiante de Ingeniería Electrónica</p>
+          </article>
+          <article class="team-member">
+            <div class="team-member__photo">
+              <img src="assets/profile-6.svg" alt="Foto de perfil de Gabriel Rubio" />
+            </div>
+            <h3>Gabriel Rubio</h3>
+            <p class="team-member__role">CMO</p>
+            <p class="team-member__bio">Estudiante de Ingeniería Civil</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--pitch" id="pitch">
+        <div class="section__header">
+          <p class="eyebrow">Presentación</p>
+          <h2>Pitch</h2>
+          <p>
+            A continuación, podrás encontrar el Pitch de nuestro proyecto:
+          </p>
+        </div>
+        <div class="pitch__video-container">
+          <!-- OPCIÓN 1: Video de YouTube -->
+          <!-- Reemplaza "VIDEO_ID" con el ID de tu video de YouTube -->
+          <!-- Ejemplo: si tu URL es https://www.youtube.com/watch?v=dQw4w9WgXcQ, el ID es "dQw4w9WgXcQ" -->
+          <div class="pitch__video-wrapper">
+            <iframe
+              class="pitch__video"
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="Video Pitch del Proyecto"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <!-- OPCIÓN 2: Video local (descomenta para usar) -->
+          <!-- 
+          <div class="pitch__video-wrapper">
+            <video
+              class="pitch__video"
+              controls
+              poster="assets/video-poster.jpg"
+            >
+              <source src="assets/pitch-video.mp4" type="video/mp4" />
+              <source src="assets/pitch-video.webm" type="video/webm" />
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
+          -->
+        </div>
+      </section>
+
+      <section class="section section--contact" id="contacto">
+        <div>
+          <p class="eyebrow">Contáctanos</p>
+          <h2>Comunícate con Nosotros</h2>
+          <p>
+            ¡Contáctanos con cualquier inquietud respecto al proyecto! Estamos felices de recibir realimentación.
+          </p>
+          <div class="contact__channels">
+            <div>
+              <strong>Correo: </strong>
+              <a href="mailto:proyectog74-tpt@gmail.com">contacto@proyectoverde.org</a>
+            </div>
+            <div>
+              <strong>Teléfono</strong>
+              <a href="tel:+573000000000">+57 300 000 0000</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact__form">
+          <label>
+            Nombre
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+          </label>
+          <label>
+            Organización
+            <input type="text" name="organizacion" placeholder="Institución" />
+          </label>
+          <label>
+            Mensaje
+            <textarea name="mensaje" rows="4" placeholder="¿Cómo podemos colaborar?"></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary">Enviar</button>
+        </form>
+      </section>
     </main>
 
-    <!-- JavaScript files -->
-    <script src="assets/js/utils.js"></script>
-    <script src="assets/js/modules/products.js"></script>
-    <script src="assets/js/modules/animations.js"></script>
-    <script src="script.js"></script> <!-- Main script -->
-</body>
+    <footer class="site-footer">
+      <img src="assets/logo-unal.svg" alt="Logo institucional" />
+      <p>© 2025 Grupo 74 - TPI. Todos los derechos reservados.</p>
+      <a href="#top" class="scroll-top" data-scroll>Volver arriba</a>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
 </html>
